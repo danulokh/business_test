@@ -1,0 +1,49 @@
+.diagram
+    padding: 0 0 170px 0
+    overflow: hidden
+    &-block
+        display: flex
+        justify-content: space-between
+        &__item
+            position: relative
+            &::before
+                left: 170px
+                top: 144px
+                content: ''
+                position: absolute
+                background: url('../icons/top-line.svg') no-repeat
+                width: 1176px
+                height: 19px
+            &::after
+                left: 104px
+                bottom: -57px
+                content: ''
+                position: absolute
+                background: url('../icons/bottom-line.svg') no-repeat
+                width: 1116px
+                height: 244px
+        &__text
+            width: 508px
+            &_title
+                font-family: 'Montserrat'
+                font-weight: 800
+                font-size: 41px
+                text-transform: uppercase
+                color: #262626
+                margin-bottom: 5px
+            &_descr
+                font-family: 'Montserrat'
+                font-weight: 400
+                font-size: 16px
+                line-height: 20px
+                text-transform: lowercase
+                color: #000000
+                margin-bottom: 100px
+                &:last-child
+                    margin-bottom: 0
+.gradient
+    background: linear-gradient(107.87deg, $main-color 37.81%, #000000 129.5%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent

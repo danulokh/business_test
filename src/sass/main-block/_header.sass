@@ -1,0 +1,98 @@
+.header
+    border-bottom: 1px solid #262626
+    &-block
+        min-height: 90px
+        display: flex
+        align-items: center
+    &__logo
+        margin-right: 117px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: -5px
+            bottom: -5px
+            width: 100%
+            height: 100%
+            border-top: 2px solid black
+            border-bottom: 2px solid black
+            transform: scaleX(0)
+            transition: .4s
+        &:hover
+            &::before 
+                transform: scaleX(1)
+    &__menu
+        display: flex
+        align-items: center
+        margin-right: 40px
+        &_link
+            position: relative
+            margin-right: 40px
+            &:last-child
+                margin-right: 0
+            a
+                font-family: 'Montserrat'
+                font-weight: 700
+                font-size: 16px
+                text-transform: uppercase
+                text-decoration: none
+                color: #262626A6
+                transition: .4s
+            &::after
+                content: ''
+                position: absolute
+                width: 100%
+                bottom: -5px
+                right: 0
+                height: 2px
+                background-color: #262626A6
+                transition: .4s
+                transform: scaleX(0)
+            &:hover
+                &::after
+                    transform: scaleX(1)
+                a
+                    color: $main-color
+    &__languages
+        position: relative
+        display: flex
+        align-items: center
+        transition: .4s
+        a
+            font-family: 'Montserrat'
+            font-weight: 700
+            font-size: 16px
+            text-transform: uppercase
+            color: $main-color
+            text-decoration: none
+        
+        img
+            margin-left: 3px
+            transition: .4s
+        &_dropdown
+            display: none
+        
+@media (min-width:992px)
+    .header__languages
+        &:hover
+            .header__languages_dropdown
+                top: 110%
+                position: absolute
+                display: flex
+                flex-direction: column
+                font-size: 14px
+                z-index: 100
+                li
+                    padding: 5px
+                    background-color: white
+                    border: 1px solid
+                    transition: .4s
+                    &:hover
+                        background-color: $main-color
+                        border-color: $main-color
+                        a
+                            color: white
+                            text-decoration: none
+                        
+            img
+                transform: rotate(180deg)
